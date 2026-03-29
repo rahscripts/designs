@@ -10,7 +10,7 @@ export default function HeroSection() {
                         Can This Love Be <span className="text-red-600 italic">Translated?</span>
                     </h1>
                     <p className="text-sm sans md:text-lg">
-                        some feelings don’t need words.
+                        some <span className="text-red-600 underline decoration-dashed underline-offset-2">feelings</span> don’t need words.
                     </p>
                 </div>
 
