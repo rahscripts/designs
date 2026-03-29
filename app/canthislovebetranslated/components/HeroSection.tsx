@@ -2,21 +2,29 @@ import Image from "next/image"
 
 export default function HeroSection() {
     return (
-        <div className="font-noto min-h-screen flex items-start my-30 max-md:20 justify-center">
-            <div className="space-y-10">
-                <div className="flex flex-col items-center">
+        <div className="font-noto min-h-screen flex items-start justify-center my-20 md:my-30">
+            <div className="space-y-10 max-md:space-y-10 w-full max-w-screen-xl px-4">
+
+                <div className="flex flex-col items-center text-center">
                     <h1 className="text-6xl tracking-tighter max-md:text-3xl">
-                        Can This Love Be Translated?
+                        Can This Love Be <span className="text-red-600 italic">Translated?</span>
                     </h1>
-                    <p className="text-sm md:text-lg sans">
+                    <p className="text-sm sans md:text-lg">
                         some feelings don’t need words.
                     </p>
                 </div>
-                <div>
-                    <Image src="/HeroCanLove.jpeg" alt="Can This Love Be Translated" width={1600} height={900} className="w-full h-auto object-cover" />
-                </div>
-            </div>
 
+                <div className="w-full">
+                    <Image
+                        src="/HeroCanLove.jpeg"
+                        alt="hero"
+                        width={1600}
+                        height={900}
+                        className="w-full rounded h-auto object-cover"
+                    />
+                </div>
+
+            </div>
         </div>
     )
 }
