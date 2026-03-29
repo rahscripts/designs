@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --font-noto: "var(--font-noto-serif)", serif;
+  --font-dm: "var(--font-dm-sans)", sans-serif;
+}
+
+@utility sans {
+  font-family: var(--font-dm-sans), sans-serif;
+}
+
+@utility font-noto {
+  font-family: var(--font-noto-serif), serif;
+}
