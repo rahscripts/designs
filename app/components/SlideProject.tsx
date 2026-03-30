@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image"
 
 type SlideProjectProps = {
@@ -56,7 +57,9 @@ export default function SlideProject({ direction = "right" }: SlideProjectProps)
                 className={`flex w-max ${direction === "left" ? "animate-marquee-left" : "animate-marquee-right"} pause-on-hover`}
             >
                 {duplicatedProjects.map((project, index) => (
-                    <div
+                    <Link
+                        href={project.link}
+                        target="_blank"
                         className="flex-shrink-0 px-2 sm:px-3"
                         // Using '20vw' ensures exactly 5 projects fit in one horizontal page/screen width 
                         style={{ width: "20vw" }}
@@ -82,7 +85,7 @@ export default function SlideProject({ direction = "right" }: SlideProjectProps)
                                 {project.name}
                             </h3>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </section>
