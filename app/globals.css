@@ -12,3 +12,57 @@
 @utility font-noto {
   font-family: var(--font-noto-serif), serif;
 }
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+.candle {
+  position: relative;
+  width: 20px;
+  height: 120px;
+}
+
+/* wax shrinking */
+.wax {
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 5px;
+  animation: burn 60s linear forwards;
+}
+
+/* flame follows */
+.flame {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 16px;
+  height: 26px;
+  background: radial-gradient(circle, #ffd54f 30%, #ff6f00 70%);
+  border-radius: 50%;
+  box-shadow: 0 0 20px #ff9800, 0 0 40px #ff5722;
+  animation: moveFlame 60s linear forwards, flicker 0.15s infinite alternate;
+}
+
+/* candle melts */
+@keyframes burn {
+  from { height: 120px; }
+  to { height: 0px; }
+}
+
+/* flame goes down */
+@keyframes moveFlame {
+  from { top: 0; }
+  to { top: 120px; }
+}
+
+/* flicker stays */
+@keyframes flicker {
+  0% { transform: translate(-50%, -100%) scale(1); }
+  100% { transform: translate(-50%, -100%) scale(1.1); }
+}

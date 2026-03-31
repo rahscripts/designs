@@ -12,16 +12,7 @@ type SlideProjectProps = {
 
 export default function SlideProject({ direction = "right" }: SlideProjectProps) {
     const projects = [
-        { name: "Can This Love Be Translated?", image: "/HeroCanLove.jpeg", link: "/canthislovebetranslated" },
-        { name: 'Facebook', image: "/HeroCanLove.jpeg", link: "/canthislovebetranslated" },
-        { name: 'Apple', image: "/HeroCanLove.jpeg", link: "/canthislovebetranslated" },
-        { name: 'Amazon', image: "/HeroCanLove.jpeg", link: "/canthislovebetranslated" },
-        { name: 'Netflix', image: "/HeroCanLove.jpeg", link: "/canthislovebetranslated" },
-        { name: 'Google', image: "/HeroCanLove.jpeg", link: "/canthislovebetranslated" },
-        { name: 'Microsoft', image: "/HeroCanLove.jpeg", link: "/canthislovebetranslated" },
-        { name: 'Tesla', image: "/HeroCanLove.jpeg", link: "/canthislovebetranslated" },
-        { name: 'SpaceX', image: "/HeroCanLove.jpeg", link: "/canthislovebetranslated" },
-        { name: 'OpenAI', image: "/HeroCanLove.jpeg", link: "/canthislovebetranslated" },
+        { name: "Candle Timer", image: "/candle.jpeg", link: "/candletimer" },
     ]
 
     // Duplicate projects to create a seamless infinite loop.
